@@ -1,10 +1,40 @@
 [versions]
 guava = "32.1.2-jre"
 junit-jupiter-engine = "5.10.0"
+kotlin = "1.9.22"
+coroutines = "1.8.0-RC2"
+arrow = "1.2.0"
+ksp = "1.9.22-1.0.17"
+kotter = "1.1.1"
+ktor = "2.3.7"
+kotlinx-serialization-json = "1.6.2"
+logback = "1.4.14"
+shadow = "8.1.1"
+kotlinx-datetime = "0.5.0"
 
 [libraries]
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter-engine" }
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
+arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
+arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
+kotter = { module = "com.varabyte.kotter:kotter-jvm", version.ref = "kotter" }
+ktor-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
+ktor-cio = { module = "io.ktor:ktor-server-cio", version.ref = "ktor" }
+ktor-server-content-negotiation = { module = "io.ktor:ktor-server-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-server-sessions = { module = "io.ktor:ktor-server-sessions", version.ref = "ktor" }
+ktor-server-compression = { module = "io.ktor:ktor-server-compression", version.ref = "ktor" }
+ktor-server-resources = { module = "io.ktor:ktor-server-resources", version.ref = "ktor" }
+ktor-server-request-validation = { module = "io.ktor:ktor-server-request-validation", version.ref = "ktor" }
+logback-core = { module = "ch.qos.logback:logback-core", version.ref = "logback" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 
 [plugins]
-jvm = { id = "org.jetbrains.kotlin.jvm", version = "1.9.22" }
+jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp" , version.ref = "ksp" }
+shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
